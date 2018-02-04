@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width">
+    <title>FC Barcelona Fan Club</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="jquery.js"></script>
+    <script>
+
+
+        $(document).ready(function() {
+            $("#cf7_controls").on('click', 'span', function() {
+                $("#cf7 img").removeClass("opaque");
+
+                var newImage = $(this).index();
+
+                $("#cf7 img").eq(newImage).addClass("opaque");
+
+                $("#cf7_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="headname">
+
+                <b><h2 align="center"><span class="highlight">FC BARCELONA</span> FAN CLUB</h2></b>
+            </div>
+        </div>
+    </header>
+
+    <section id="videosection">
+        <div class="container">
+            <center><b><h3 id="highlighttitle" >Barcelona vs Alaves 2-1: All Goals and Highlights</h3></b>
+            <video id="videopos" height="350" controls>
+                <source src="./vid/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></center>
+
+
+        </div>
+    </section>
+    <section id="buttonsection">
+
+        <center><b><h3>Latest News</h3></b></center>
+        <div id="newscontent">
+
+            <h4><b>Coutinho versatility an asset to Barcelona, says Valverde.</b></h4><br>
+            <h5><p>The coach is satisfied overall with how Barcelona's transfer window has panned out, with the arrival of the Brazil international the highlight
+                Ernesto Valverde insists Philippe Coutinho can excel in a number of different positions for Barcelona as he looked back on a busy transfer window at the club.
+
+                Coutinho has made a low-key start to his Barca career on the back of his blockbusting €160m move from Liverpool.
+
+                The Brazil international was initially laid low by a thigh injury before appearing as a substitute against Espanyol in the Copa del Rey and playing an hour as late goals from Luis Suarez and Lionel Messi sealed a dramatic 2-1 La Liga win over Alaves at the weekend.</p></h5>
+            <p>
+                <h5>Coutinho is in line to feature once more when Barca host Valencia in the first leg of their Copa semi-final on Thursday.
+
+                The 25-year-old's appearances have come nominally on the right of midfield for Barca so far. "I talked to him and we both thought that the best thing was a way out," he said.
+
+            "We think the best thing is that he can have minutes because there is also a World Cup and there are options [for Deulofeu] to go.
+
+            "I am happy with him personally because of how he has been here."</h5>
+            </p>
+        </div>
+        <button id="readmore" type="submit" class="button1" onclick="myFunction()">Read More</button>
+
+    </section>
+    <section id="transitionsection">
+        <h3 align="center"> Photo Gallery </h3>
+
+        <div id="cf7" class="shadow">
+            <img class='opaque' src="./img/p1.jpg" width="100%" height="100%" />
+            <img src="./img/p2.jpg" width="100%" height="100%" />
+            <img src="./img/p3.jpg" width="100%" height="100%" />
+            <img src="./img/p4.jpg" width="100%" height="100%" />
+        </div>
+        <p id="cf7_controls">
+            <span class="selected">Messi</span>
+            <span>Team Photo</span>
+            <span>Camp Nao</span>
+            <span>The Crest</span>
+        </p>
+
+    </section>
+    <footer><h6><center><details>
+        <summary>Copyright 2018.</summary>
+        <p> - by Ankit Mohokar. All Rights Reserved.</p>
+    </details></center></h6></footer>
+    <script>
+        var content = document.getElementById("newscontent");
+        var button = document.getElementById("readmore");
+        function myFunction() {
+            //type here
+            if(content.className == "open"){
+                //shrink here
+                content.className = "Read";
+                button.innerHTML = "Read More"
+            } else{
+                //expand here
+                content.className = "open";
+                button.innerHTML = "Show Less";
+            }
+
+
+        }
+    </script>
+</body>
+</html>
